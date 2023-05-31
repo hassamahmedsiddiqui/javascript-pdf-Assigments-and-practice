@@ -1,0 +1,41 @@
+/* h1 {
+    text-align: center;
+  }
+  
+  input[type="text"] {
+    width: 200px;
+    padding: 5px;
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 5px 10px;
+  }
+   */
+
+
+   #post-option-ui {
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f7f7;
+    padding: 10px;
+  }
+  
+  #post-content {
+    height: 100px;
+    resize: none;
+    margin-bottom: 10px;
+  }
+  
+  #post-button {
+    background-color: #4c8bf5;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  #post-container {
+    margin-top: 20px;
+  }
+  
