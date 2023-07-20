@@ -1,265 +1,374 @@
-// ---------CHAPTER NO # 14 TO 16
-
-//Q NO # 01
-
-//var stdName = []
-
-//Q NO # 02
-
-// var stdName = new Array ();
-// console.log(std);
-
-//Q NO # 03
-
-// var stdName = ["HASSAM", "SIDDIQUI","AHMED"];
-// console.log(stdName);
-
-//Q NO # 04
-
-// var num = [ 1, 2, 3, 4, 5];
-// console.log(num);
-
-//Q NO # 05
-
-// var boolean = [ true, false, false, true];
-// console.log(boolean);
-
-//Q NO # 06
-
-// var array = ["SIDDIQUI","25","TRUE"];
-// console.log(array);
-
-//Q NO # 07
-
-// var edu = ["SSC","HSC","BCS","BS","BCOM","MS","M.PHILL.","PHD"];
-// document.write("<h1>Qualifications :</h1>");
-// document.write("<ol><li> "+edu[0]+" </li><li> "+edu[1]+" </li><li> "+edu[2]+" </li><li> "+edu[3]+" </li><li> "+edu[4]+" </li><li> "+edu[5]+" </li><li> "+edu[6]+" </li><li> "+edu[7]+" </li></ol>");
-
-//Q NO # 08
-
-// var std=["ATEHR","OSAMA","ASAD"];
-// var num=["320","230","480"];
-// var tolt= 500;
-
-// document.write("Score of " +std[0]+ " is "+num[0]+". Percentaage: "+(num[0]/tolt*100)+"%");
-// document.write("<br />Score of " +std[1]+ " is "+num[1]+". Percentaage: "+(num[1]/tolt*100)+"%");
-// document.write("<br />Score of " +std[2]+ " is "+num[2]+". Percentaage: "+(num[2]/tolt*100)+"%");
-
-//Q NO # 09
-
-// var array=["red","green","orange"];
-// document.write(array);
-
-//Q NO # 09(a)
-
-// var color = window.prompt("What color you want to add at start.");
-// array.unshift(color);
-// document.write(array);
-
-//Q NO # 09(b)
-
-// var color = window.prompt("What color you want to add at end.");
-// array.push(color);
-// //document.write(array);
-
-//Q NO # 09(c)
-
-// array.unshift("black","white");
-// document.write(array);
-
-//Q NO # 09(d)
-
-// array.shift();
-// document.write(array);
-
-//Q NO # 09(e)
-
-// array.pop();
-// document.write(array);
-
-//Q NO # 09(f)
-
-// var index=window.prompt("Which index you want to add a color.");
-// var color = window.prompt("What color you want to add.");
-// array.splice(index, 0, color);
-// document.write(array);
-
-//Q NO # 09(g)
-
-// var index=window.prompt("Which index you want to delete a color.");
-// var color = window.prompt("What color you want to delete.");
-// array.splice(index,color);
-// document.write(array);
-
-// Q NO # 10
-
-// var scores = [34, 56, 21, 67, 92, 55, 44, 33, 77, 90];
-// document.write("Scores of students:" + scores + "</br>");
-// scores.sort();
-// document.write("Orderd scores of:" + scores + "</br>");
-
-// Q NO # 11
-
-
-// var cities = ["Karachi","Lahore","Islamabad","Quetta","peshawar"];
-// document.write("<h1>Cities List</h1>"+ " " +cities )
-
-// var selectedCities = cities.slice(2,4);
-// document.write("<h1>Selected cities list :</h1>");
-// document.write(selectedCities);
-
-// Q NO # 12
-// var arr =["this","is","my","cat"];
-// document.write(arr.join(" "));
-
-
-
-
-// Q NO # 15 
-// var manufacture = ["Samsung","Apple","Motorola","Nokia","Sony","Haier"];
-
-// document.write("<select>"+
-// "<option>"+manufacture[0]+"</option>"+
-// "<option>"+manufacture[1]+"</option>"+
-// "<option>"+manufacture[2]+"</option>"+
-// "<option>"+manufacture[3]+"</option>"+
-// "<option>"+manufacture[4]+"</option>"+
-// "<option>"+manufacture[5]+"</option>"+
-// "</select>");
-
-
-// -------------CHAPTER 17 TO 20---------------
-
-
-//  Q NO # 1
-
-// var mDimensional = [[],[],[]]
-
-
-
-// Q NO # 2
-
-// var matrix = [[0,1,2,3],[1,0,1,2],[1,0,1,2]];
-// document.write(matrix[0].join(" ") + "</br>");
-// document.write(matrix[1].join(" ") + "</br>");
-// document.write(matrix[2].reverse().join(" ") + "</br>");
-
-
-// Q NO # 3
-
-// for(var i = 1; i <= 10; i++){
-//     document.write(i + "</br>")
-// }
-
-
-// Q NO # 4
-
-// var num =[1,2,3,4]
-// console.log(num)
-// var num = prompt("Enter the number for table");
-// var len = prompt("Enter lenght multiplication table ")
-// for (i = 1; i <= len; i++) {
-//     document.write(num+" "+"x"+" "+i+" "+"="+" "+i*num+"<br />")
-// }
-
-
-// var tableNo = prompt("Enter The tabel number that you want to print");
-// var tableLength = prompt("Enter the length number");
-
-// document.write("Multiplication table of " + tableNo + " Length " + tableLength + "<br>");
-
-// for (var i = 1; i <= tableLength; i++) {
-//     document.write(tableNo + " x " + i + " = " + tableNo * i + "<br>");
-// }
-
-
-//   Q NO # 5 
-
-// var fruits = ["apple","banana","mango","orange","strawbery"];
-
-// for (var i = 0; i < fruits.length; i++) {
-//     document.write(fruits[i] + "<br>");
+// function makeSmall(){
+//     var image = document.getElementById("car");
+//     console.log(image);
+//     image.className = "small-car"
 
 // }
 
-// for (var i = 0; i < fruits.length; i++) {
-//     document.write("Element at index " + i + " is " + fruits[i] + "<br>");
+// function zoomCar(){
+//     var image = document.getElementById("car");
+//     image.className += "zoom-car"
 // }
 
 
-//   Q NO # 6
+//  create Elementing or text Node
 
-// document.write("<br><br> Counting: <br><br><br>");
+// var newElement = document.createElement("h1");
+// var createNode = document.createTextNode("this is a tex");
+// // console.log(createNode);
+// newElement.appendChild(createNode)
+// console.log(newElement);
+// var target = document.getElementById("test");
+// target.insertAdjacentElement('beforebegin', newElement)
 
-// var counting = [];
 
-// for (var i = 1; i <= 15; i++) {
-//     counting.push(i);
+// var target = document.getElementById("test");
+// target.style.backgroundColor = "aqua";
+// var newElement = "<h1>this is a heading</h1>";
+// target.insertAdjacentText("afterbegin",newElement)
+
+// var newElement = document.createElement('li');
+// var newText = document.createTextNode("hello fruit");
+// newElement.appendChild("newText");
+
+// var target = document.getElementById("test");
+// console.log(target)
+
+
+
+//       Contructor Fucntion
+//  function Car (name,model,price){
+//     this.name = name;
+//     this.model = model;
+//     this.price = price;
+
+//  }
+// let Cars =[
+//     new Car ('corolla',2018,2800000),
+//     new Car ('cultus','2008',555000)
+
+// ]
+// console.log(Cars[0].name)
+
+//     Constructor Function
+
+
+// function Student(firstName,LastName)  {
+//  this.firstName = firstName;
+//  this.LastName = LastName ;
+//  this.getFullName =  () => {
+//   return `${this.firstName} ${this.LastName}`
+//  }
+// }
+// let student = new Student("awais",'ahmed');
+// console.log(student.getFullName());
+
+
+
+//        Checking Prototypes using constructor function
+
+// function Student(firstName,LastName)  {
+//     this.firstName = firstName;
+//     this.LastName = LastName ;
+//     Student.prototype.getFullName =  () => {
+//      return `${this.firstName} ${this.LastName}`
+//     }
+//    }
+//    let student = new Student("awais",'ahmed');
+//    console.log(student);
+// for (var key in student){
+//     console.log(student[key])
 // }
 
-// document.write(counting);
+//  console.log(Object.entries(student)[1].slice())
+//  let arr =Object.entries(student)[0].firstName.slice();
+//  console.log(arr)
+
+
+// let dropDown = document.getElementById('drop-down');
+// let gender = document.getElementsByName('gender');
+// submit = ()=>{
+//     // console.log(dropDown.value)
+//     for (var i = 0; i < gender.length; i++){
+//         if(gender[i].checked){
+//             console.log(gender[i].value)
+//         }
+//     }
+// console.log(inputRadio)
+
+
+// let file  = document.getElementById('file');
+// let image = document.getElementById('image')
+// fileSubmit =() => {
+//         image.src = URL.createObjectURL(file.files[0]);
+//     // console.log(URL.createObjectURL(file.files[0]))
+//     }
+
+// function checkRadioButtons() {
+//     var radioButtons = document.getElementsByName('option');
+//     var isChecked = false;
+
+//     for (var i = 0; i < radioButtons.length; i++) {
+//       if (radioButtons[i].checked) {
+//         isChecked = true;
+//         break;
+//       }
+//     }
+
+//     var mouseClickEvent = function (event) {
+//       event.preventDefault();
+//       event.stopPropagation();
+//     };
+
+//     if (!isChecked) {
+//       document.addEventListener('click', mouseClickEvent);
+//     } else {
+//       document.removeEventListener('click', mouseClickEvent);
+//     }
+//   }
+
+
+// call back funtion
+
+// setTimeout(()=>{
+//   let obj = {
+//     name : 'hassam',
+//     email : 'hassamahmed03@gmail.com',
+//   }
+// abc(obj)
+// },3000)
+// // console.log('world')
+// abc = (obj) =>{
+// console.log(obj)
+// }
+// console.log('hello')
+
+//callback funtion Example
+
+// sayHello = () =>{
+//     console.log('hello')
+// }
+// add = (num1,num2,callback)=>{
+// console.log(num1 + num2)
+// callback()
+// }
+// let a =10;
+// let b = 20;
+// add(a,b,sayHello)
 
 
 
-// document.write("<br><br> Reverse Counting: <br><br><br>");
+// foo = (callback) =>{
+//     // console.log(callback)
+//     setTimeout(()=>{
+//         let obj = {
+//                 name : 'hassam',
+//                 email : 'hassamahmed03@gmail.com',
+//               }
+//     callback(obj)
+//     },3000)
+// }
+// abc = (hello)=>{
+//     console.log(hello)
+// }
+// foo(abc)
 
-// var reverseCounting = [];
+// abc = () => {
+//     return new Promise ((resolve,reject)=>{
+//         setTimeout(() => {
+//             let obj = {
+//                 name: 'hassam',
+//                 email: 'hassamahmed03@gmail.com',
+//             }
+//             resolve(obj)
+//         }, 3000)
+//     })
 
-// for (var i = 10; i > 0 ; i--) {
-//     reverseCounting.push(i);
+//     }
+// // console.log(obj)
+// abc()
+// .then()
+
+// fetch('https://jsonplaceholder.typicode.com/users')
+// .then(response => response.json())
+
+// .then(resolve =>{
+//     console.log(resolve,'agaya dataaa')
+// })
+// .catch(reject =>{
+//     console.log(reject,'nahi aya data')
+// } )
+
+// const data =['hassam'];
+// console.log(data)
+// data.push('ahmed');
+// console.log(data)
+
+// let firstName = 'hassam'
+// let lastName = 'ahmed';
+// let fullName = `${firstName} ${lastName}`
+// console.log(fullName)
+
+
+// rest operrator
+// abc = (a='provided',...all)=>{
+// console.log(a,all)
+// }
+// abc('hassam','ahmed','03456412160','hassaahned03@gmail.com')
+
+
+// Spread Operator
+
+// let arr = [1, 2, 3, 4, 5]
+
+// let arr1 = [6, 7, 8, 9, 0]
+//  let merge = [...arr,...arr1];
+//  console.log(merge)
+
+
+// let user = {
+//     firstName :'hassam',
+//     lastName : 'ahmed'
+// }
+// let student = {
+//     email: 'hassamahmed03@gmail.com'
 // }
 
-// document.write(reverseCounting);
+// let merge = {...user,...student};
+// console.log( merge)
+
+// Shallow Copy & Deeep Copy
+
+// let obj = { name: 'hassam', detail: { school: 'saylani' } };
+// let obj1 = { ...obj, detail: { ...obj.detail } };
+// obj1.detail.school = 'smit'
+// console.log(obj)
+// console.log(obj1)
 
 
+// Destructring
+// object destructuring
 
-// document.write("<br><br> Even: <br><br><br>");
+// let obj = {
+//     name: 'hassam',
+//     lastName: 'ahmed',
+//     email: 'hassam@03',
+//     details: {
+//         school: 'smit',
+//     }
+// }
+// let { lastName, email, name, details } = obj;
+// let { school } = details;
+// console.log(obj)
 
-// var even = [];
+// Array Destructuring
 
-// for (var i = 0; i <= 20 ; i++) {
-//     if (i % 2 === 0) {
-//         even.push(i);
+// let arr = ['hassam', 'ahmed', 'saylani'];
+// let [a,b,c] = arr;
+// console.log(a,c,b)
+
+// let arr = ['hassam',4433,'smit',true];
+
+// for(let i =0; i <arr.length;i++){
+//     console.log(arr[i])
+// }
+// arr.forEach((v,i)=>{
+// console.log(v,i)
+// })
+// map return new arrayy
+
+// let result =  arr.some((v,i)=>{
+//     console.log(v,i)
+//     // return `saylani ${v}`
+//     return  v === 'hello'
+// })
+// console.log(result)
+
+
+// let arr = [1,2,3,4,5,52,1,1,331,4,25,35,33,53,35]
+// console.log(arr.sort())
+// let arr = ['hassam',4433,'smit',true];
+// let result = arr.map((v)=>{
+// // console.log(v)
+// return `saylani${v}`
+// })
+// console.log(result)
+// let result = arr.filter((v)=>{
+// return  v === 'hass'
+// })
+// console.log(result)
+
+// 
+// abc =()=>{
+//     console.log('hello')
+// }
+// abc()
+
+// let foo = a=> a + 100;
+// console.log(foo(120))
+
+
+// let obj = {
+//     name: 'hassam',
+//     getName : function() {
+//         console.log(this)
+//     }
+// }
+// obj.getName()
+
+
+// class Student {
+//     constructor(name,email){
+//         this.name = name;   
+//         this.email = email;
+//     }
+//     getName(){
+//         return this.email
 //     }
 // }
 
-// document.write(even);
+// let student = new Student("hassam",'hassamahmed03@')
+// console.log(student.getName())
 
+// let fullName ='hassa'
+// let abc = fullName && ' provided';
+// console.log(abc)
 
+// let welcome = name => `hello ${name} too young age`;
+// console.log(welcome('ghous'))
+// console.log(welcome('hassam'))
 
-// document.write("<br><br> Odd: <br><br><br>");
+// javaScript Closuress
 
-// var odd = [];
-
-// for (var i = 1; i < 20 ; i++) {
-//     if (i % 2 !== 0) {
-//         odd.push(i);
+// outerunction =()=>{
+//     let school = 'saylani'
+//     innerFuntion =()=>{
+//         console.log(school)
 //     }
+//     innerFuntion()
+// }
+// outerunction()
+
+// Recursion
+
+// let count = 0;
+// loop= ()=>{
+// console.log(count)
+// if(count < 10){
+//     count++
+//     loop()
 // }
 
-// document.write(odd);
-
-
-
-// document.write("<br><br> Series: <br><br><br>");
-
-// var series = [];
-
-// for (var i = 2; i <= 20 ; i++) {
-//     if (i % 2 === 0) {
-//         series.push(i + "k");
-//     }
 // }
+// loop()
 
-// document.write(series);
+// Factory Function
 
-
-// Q NO # 10
-
-for (i = 1; i <= 20; i++) {
-    document.write (5 * i + ",")   
-}
-
-
-
+// function car(name,model){
+// return {
+//     name:name,
+//     model:model,
+// }
+// }
+// console.log(car('liana',2019))
 
