@@ -504,31 +504,260 @@
 
 //  promise all section
 
-let p1 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        console.log('the first promise is resolved')
-        resolve(10)
-    }, 1000)
-})
-let p2 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        console.log('the second promise is failed')
-        reject('failed')
-    }, 1000)
-})
-let p3 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        console.log('the third promise is resolved')
-        resolve(30)
-    }, 1000)
-})
-let total = 0;
-Promise.all([p1, p2, p3]).then((result) => {
-  for(var i in result){
-    total += result[i]
-    console.log('total -->' ,total)
-  }
- console.log(`result : ${result} total sum of promises is ${total}`)
-}).catch((err)=>{
-   console.log(`error : ${err}`)
-})
+// let p1 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         console.log('the first promise is resolved')
+//         resolve(10)
+//     }, 1000)
+// })
+// let p2 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         console.log('the second promise is failed')
+//         reject('failed')
+//     }, 1000)
+// })
+// let p3 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         console.log('the third promise is resolved')
+//         resolve(30)
+//     }, 1000)
+// })
+// let total = 0;
+// Promise.all([p1, p2, p3]).then((result) => {
+//   for(var i in result){
+//     total += result[i]
+//     console.log('total -->' ,total)
+//   }
+//  console.log(`result : ${result} total sum of promises is ${total}`)
+// }).catch((err)=>{
+//    console.log(`error : ${err}`)
+// })
+
+// let test = async () =>  'hello world'
+
+// // console.log(test())
+// test().then((res) => {
+//     console.log(res)
+// })
+
+// test = async () => {
+//     console.log('2: message')
+//     await console.log('3: message')
+//     console.log('4: message')
+
+// }
+// console.log('1: message')
+// test()
+// console.log('5: message')
+
+// let test = ()=>{ fetch('https://jsonplaceholder.typicode.com/users')
+//     let response =then(response => response.json())
+//     let the (json => console.log(json))
+//     .catch(err => console.log('err-->',err) )}
+
+// let ages =  [10,14,23,16,19,18,18,22,25,10]
+// let b = arr.filter(checkAdult)
+// document.write(b + '<br>')
+// checkAdult = (age)=>{
+// return age >= 18;
+// }
+// checkAdult()
+// let filtered = ages.filter(value=>value === 18 || value === 10 );
+// console.log(filtered.sort())
+// document.write(filtered.slice(1))
+// let arrNumber =  [3,10,14,23,16,19,18,18,88,1,22,25,10];
+
+// let maxNumber = (arr) =>{
+    //     return arr.reduce((pre,curr) =>{
+        //         return pre < curr?pre:curr
+        //     })
+        // }
+        // console.log(maxNumber(arrNumber))  
+        
+// let arrNumber =  [3,10,14,23,16,19,56,18,18,88,1,22,25,10];
+// let largestValue = (arr)=>{
+//  firstLargestValue =  Math.max(...arr)
+//  index = arr.indexOf(firstLargestValue)
+// arr.splice(index,1)
+// // console.log('index-->',index)
+// secondLargestValue =  Math.max(...arr)
+
+// return(secondLargestValue)
+// }
+// console.log(largestValue(arrNumber))
+
+
+
+// const numbers = [5, 2, 9, 1, 7];
+
+// numbers.sort((a, b) => b - a);
+// const secondLargest = numbers[1];
+// console.log(secondLargest)
+
+// let arrNumber =  [3,10,14,23,16,19,56,18,18,88,1,22,25,10];
+//  let largestValue = (arr)=>{
+//    firstLargestValue = Math.max(...arr)
+//    index = arr.indexOf(firstLargestValue)
+//    console.log('index-->',index)
+//   deleted = arr.splice(index,1);
+//   console.log('deleted-->',deleted)
+//   secondLargestValue = Math.max(...arr)
+
+//    return(secondLargestValue)
+//  }
+//  console.log(largestValue(arrNumber))
+
+
+// diff between find and filter
+
+// const employeeArr =[
+//     {name:'ali',age:23},
+//     {name:'hassam',age:17},
+//     {name:'hassam',age:25},
+//     {name:'hassam',age:13},
+//     {name:'hassam',age:18},
+//     {name:'hassam',age:20},
+//     {name:'hassam',age:19},
+//     {name:'hassam',age:15},
+    
+// ]
+// let filteredItem = employeeArr.filter((item)=>{
+//     return item.age >= 20
+// })
+// console.log(filteredItem)
+
+
+// const empArr =[
+//     {name:'ali',age:25},
+//     {name:'hassam',age:17},
+//     {name:'bhundu',age:25},
+//     {name:'hassam',age:13},
+//     {name:'hassam',age:18},
+//     {name:'hassam',age:20},
+//     {name:'hassam',age:19},
+//     {name:'hassam',age:15},
+    
+// ]
+// let findItem = empArr.find((item)=>{
+//     return item.age >= 20
+// })
+// console.log(findItem)
+
+// finding missing Number
+
+// let arrNum = [1,2,3,4,5,6,9,10]
+// let missArray =[]
+// let missingValue = (arr)=>{
+//     let minValue = Math.min(...arr)
+//     let maxValue = Math.max(...arr)
+// console.log('minValue-->',minValue,'maxValue-->',maxValue,'arr-->',arr)
+// for(i = minValue;i < maxValue;i++){
+//       if(arr.indexOf(i)<0){
+//         missArray.push(i)
+//           console.log('i-->',i)
+//       }
+// }
+// return(missArray)
+// }
+// console.log(missingValue(arrNum))
+
+// let userNumber =  prompt('enter a number to check ')
+// if(userNumber/2 ===0){
+//  alert('its a even')
+// }
+// console.log(userNumber.value)
+
+
+// odd or even
+// function checkOddOrEven(number) {
+//     if (number % 2 === 0) {
+//        alert('its an even');
+//     } else {
+//         alert('its an odd ');
+//     }
+//   }
+//   checkOddOrEven(prompt('input some number'))
+  
+
+//   che =(number)=>{
+//     if(number %2===0){
+//         alert('even')
+//     }
+//     else{
+//         alert('odd')
+//     }
+//   }
+
+//   che(prompt('che'))
+  
+// let arrNum = [1,2,3,4,5,6,9,10]
+// let sum = 0;
+// for(let i =0;i < arrNum.length; i++){
+//     sum += arrNum[i]
+// }
+// console.log(sum)
+
+// GrandTotal=()=>{
+//     let sum = 0;
+//     return let ilt =  for(let i =0;i < arrNum.length; i++){
+//         sum += arrNum[i]
+//     }
+
+// }
+// GrandTotal()
+
+// let sumNumber = (arr)=>{
+// return arr.reduce((prev,curr)=>{
+//   return prev + curr
+// })
+// }
+// console.log(sumNumber(arrNum))
+
+// let userNumber = prompt('enter a number');
+// if(userNumber ==1){
+//     alert(`${userNumber} is not a prime neither composite`)
+// }
+// else if (userNumber > 1){
+//     alert(`prime number of  ${userNumber} is not possible `)
+// }
+// let userInput = prompt('enter  a word to chevk its  a vovel or not')
+// userInput =userInput.toLocaleLowerCase()
+// if(userInput === 'a' ||userInput === 'e' ||userInput === 'i' ||userInput === 'o' ||userInput === 'u'){
+//     alert(`${userInput} its a vovel`)
+// }
+// else{
+//     alert(`${userInput} its not a vovel`)
+// }
+
+// Palindrome 
+
+// let userInput =  prompt('enter a word to check its palindrom or  not')
+// let palindrom = (userInput)=>{
+// let result = userInput.split('').reverse().join('');
+// // userInput =userInput.toLocaleLowerCase()
+// if(userInput ===result){
+//     alert(`${userInput} its a palindrome word`)
+// }
+// else{
+//     alert(`${userInput} its not a palindrome word`)
+// }
+// }
+// console.log(palindrom(prompt('enter a word to check its palindrom or  not')))
+
+// swapping variable values usinng any third variable
+
+// let a = 10;
+// let b = 20;
+// [a,b] = [b,a]
+// console.log('a-->',a,'b-->',b)
+// console.log(`value of a a ${a} & value of b is ${b}`)
+
+// merging and sorting the array
+//  let arr = [1,4,5,8]
+//  let arr1 = [2,10,9,7]
+//  let merge = [...arr,...arr1]
+//  let sort = merge.sort((a,b)=>{
+//   return a-b
+//  })
+// //  let sort = merge.sort()
+//  console.log(sort)
