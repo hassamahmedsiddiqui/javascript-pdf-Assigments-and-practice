@@ -1,101 +1,83 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
-import { getAuth,createUserWithEmailAndPassword  } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
-import { getFirestore,collection,addDoc ,getDocs, updateDoc,doc ,serverTimestamp  } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-firestore.js";
+//   Some practice to clearing concept then we start todo app assigmentvar 
+// let main = document.getElementById("main")
+// let div = document.createElement("div");
+// let p = document.createElement("p");
+// div.setAttribute("class","container")
+// let text = document.createTextNode("Ghous Ahmed");
+// p.appendChild(text);
+// div.appendChild(p)
+// main.appendChild(div)
+// console.log(p)
+// console.log(div)
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyDuRKkLMTKOxdYJ9QIfDRHZsB36KbrsCqE",
-    authDomain: "fir-assigment-e923c.firebaseapp.com",
-    projectId: "fir-assigment-e923c",
-    storageBucket: "fir-assigment-e923c.appspot.com",
-    messagingSenderId: "97178963752",
-    appId: "1:97178963752:web:83d5f2ec0d7312e139ca1d",
-    measurementId: "G-TD856XT58T"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth(app);
-  const db = getFirestore(app);
+                // Making todo app using ECMA 5 FEATURES                 
 
 
+addTodo = () =>{
+  let todo = document.getElementById("todo");
+  console.log('todo.value-->',todo.value);
+  
+  if(todo.value.trim() === ""){
+    Swal.fire(
+      'Input Field is Blank',
+      'Fill Some Input?',
+      'Blank Input'
+    )
+  }else{
+    let li = document.createElement("li");
+    let text = document.createTextNode(todo.value);
+    li.appendChild(text);
+    let list = document.getElementById("list");
+    list.appendChild(li);
+    let delButton = document.createElement("button");
+    let delText = document.createTextNode("delete");
+    delButton.appendChild(delText);
+    delButton.setAttribute("onclick","delTodo()")
+    delButton.setAttribute('class','button3')
+    console.log(delButton)
+    let editButton = document.createElement("button");
+    let editText = document.createTextNode("edit");
+    editButton.appendChild(editText);
+    editButton.setAttribute("onclick","editTodo()")
+    editButton.setAttribute('class','button3')
+    li.appendChild(delButton);
+    li.appendChild(editButton);
+    list.appendChild(li);
+    todo.value = "";
+  }
+    console.log(list)
+    console.log(text)
+    console.log(li);
+}
+                  // MAKING TODO APP USING ECMA 6 TEMPLATE LITERAL FEATURE
 
-// let btnReg = document.getElementById('Register-btn')
-// btnReg.addEventListener('click',()=>{
-//     let name = document.getElementById('name')
-//     let phone = document.getElementById('phone')
-//     let email = document.getElementById('email')
-//     let password = document.getElementById('password')
-//     let userData = {
-//         name : name.value,
-//         phone: phone.value,
-//         email : email.value,
-//         password: password.value,
-        
-        
-//       }
-//       createUserWithEmailAndPassword(auth, userData.email, userData.password)
-//       .then(async(userCredential) => {
-//         // Signed in 
-//         const user = userCredential.user;
-//         console.log('user-->',user)
-//         try {
-//           const docRef = await addDoc(collection(db, "users"), {
-//             ...userData,
-//             uid : user.uid,
-//             timestamp: serverTimestamp(),
-        
-//       });
-//       console.log('time-->',time)
-//       console.log("Document written with ID: ", docRef.id);
-//     } catch (e) {
-//       console.error("Error adding document: ", e);
-//     }
-//     // ...
-//   })
-//   .catch((error) => {
-//     const errorCode = error.code;
-//     const errorMessage = error.message;
-//     console.log('error-->',error)
-//     // ..
-//   });
-//     // console.log('user-->',user)
-// })
+// addTodo = () => {
+  
+//   let list = document.getElementById("list");
+//   let todo = document.getElementById("todo");
+//   list.innerHTML = `<li>${todo.value}     
+//        <button onclick=delTodo()>Delete</button>
+//        <button onclick=editTodo()>edit</button>
+//        </li> `
 
-// let getAllUsers =async ()=>{
-
-//   const querySnapshot = await getDocs(collection(db, "users"));
-//   querySnapshot.forEach((doc) => {
-//     console.log(`${doc.id} =>`,doc.data());
-//   });
 // }
-// getAllUsers()
 
-let btn = document.getElementById('update-btn')
-// console.log(btn)
-btn.addEventListener('click',async()=>{
-  console.log('current-->', auth.currentUser)
-  const id = auth.currentUser.uid
-  console.log('id-->',id)
-//   const washingtonRef = doc(db, "users", id);
-//   let updateName = document.getElementById('updateName')
-//   let updatePhone = document.getElementById('updatePhone')
-//   // console.log('ref-->',washingtonRef)
-//   try{  
-//   await updateDoc(washingtonRef, {
-//     name: updateName.value,
-//     phone: updatePhone.value,
-//   });
-//   console.log('updated')
-// }catch(err){
-//   console.log('error-->',err)
-// }
-})
 
-// import { doc, updateDoc, increment } from "firebase/firestore";
+delTodo = () => {
+  event.target.parentNode.remove()
+}
 
-// const washingtonRef = doc(db, "cities", "DC");
+deleteAll = () => {
+  let list = document.getElementById("list");
+  list.innerHTML = "";
+  console.log(list)
+}
 
-// // Atomically increment the population of the city by 50.
-// await updateDoc(washingtonRef, {
-//     population: increment(50)
-// });
+editTodo = () => {
+  let oldValue = event.target.parentNode.firstChild.nodeValue;
+  let editValue = prompt("enter a updated Value", oldValue);
+  event.target.parentNode.firstChild.nodeValue = editValue;
+  console.log(editValue)
+}
+
+window.addTodo = addTodo;
